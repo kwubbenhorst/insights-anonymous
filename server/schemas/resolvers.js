@@ -1,4 +1,4 @@
-const { User, Conversation, Category } = require('./models');
+const { User, Conversation, Category } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 const findMatchingCounselor = require('../utils/matchingAlgorithm'); // import the matching algorithm for use in the createConversation mutation resolver
 //const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');

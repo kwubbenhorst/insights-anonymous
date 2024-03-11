@@ -21,7 +21,7 @@ const typeDefs = gql`
     createdAt: String!
     isClosed: Boolean!
     closedAt: String
-    valueAtClose: Number
+    valueAtClose: Float
     isPrivate: Boolean!
     expertiseCategory: ID
     responses: [Response!]!
@@ -72,11 +72,7 @@ const typeDefs = gql`
       conversationId: ID!, 
       responseText: String!, 
       username: String!
-    ): Response
-    updateConversation(conversationId: ID!, updatedConversationHeadText: String!): Conversation
-    updateResponse(responseId: ID!, updatedResponseText: String!): Response
-    deleteResponse(responseId: ID!): Response
-    } 
+    ): Response 
   }
 `;
 

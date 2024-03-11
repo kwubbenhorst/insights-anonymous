@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Vollkorn:wght@400;600&family=Didact+Gothic:wght@400;600&family=Alegreya+Sans:wght@400;600&family=Frank+Ruhl+Libre:wght@400;600&family=Tinos:wght@400;600&family=Protest+Riot&display=swap&family=Architects+Daughter&family=Marienda:wght@400;600&family=Handlee&family=Bad+Script&family=Sriracha&family=Junge:wght@400;600&family=Liu+Jian+Mao+Cao&family=Educational+NC:wght@400;600&display=swap');
+
+#root {
+    max-width: 1280px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --light: #f2e9e4;
+    --med-light: #c9ada7;
+    --medium: #9a8c98;
+    --med-dark: #4a4e69;
+    --dark: #22223b;
+    
+    --font-crimson-pro: 'Crimson Pro', serif;
+    --font-vollkorn: 'Vollkorn', serif;
+    --font-didact-gothic: 'Didact Gothic', sans-serif;
+    --font-alegreya-sans: 'Alegreya Sans', sans-serif;
+    --font-frank-ruhl-libre: 'Frank Ruhl Libre', serif;
+    --font-tinos: 'Tinos', serif;
+    --font-protest-riot: 'Protest Riot', sans-serif;
+    --font-architects-daughter: 'Architects Daughter', cursive;
+    --font-marienda: 'Marienda', serif;
+    --font-handlee: 'Handlee', cursive;
+    --font-bad-script: 'Bad Script', cursive;
+    --font-sriracha: 'Sriracha', cursive;
+    --font-junge: 'Junge', serif;
+    --font-liu-jian-mao-cao: 'Liu Jian Mao Cao', cursive;
+    --font-educational-nc: 'Educational NC', sans-serif;
+
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+body {
+    font-family: var(--font-alegreya-sans);
+    background-color: var(--light);
+    color: var(--medium);
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    place-items: center;
+}
+
+.header-container {
+    width: 100vw;
+}
+
+.footer-container {
+    width: 100vw;
+}
+    
+.main-content {
+    margin: 0 5%;
+}
+
+/*
+    
+.main-content-portfolio-page {
+    margin: 0;
+}
+
+8*/
+    
+h1, h2 {
+    font-family: var(--font-alegreya-sans);
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+    
+h3, p {
+    font-family: var(--font-marienda);
+}
+    
+a {
+    font-family: var(--font-marienda);
+    font-weight: 500;
+    color: var(--med-light);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--light);
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #2f3e46;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    a:hover {
+      color: #cad2c5;
+    }
+    button {
+      background-color: #52796f;
+    }
+  }
+    
+
+
+/*  
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+  
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+  
+@keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+  
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+}
+  
+.card {
+    padding: 2em;
+}
+  
+.read-the-docs {
+    color: #888;
+}
+*/
