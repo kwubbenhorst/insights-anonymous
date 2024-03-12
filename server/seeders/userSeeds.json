@@ -1,0 +1,242 @@
+[
+    {
+        "username": "confident_owl",
+        "email": "tiffany@gmail.com",
+        "password": "password123",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["financial", "personal", "career"],
+        "personality": ["O", "!C", "E", "!A", "N"]
+    },
+    {
+        "username": "majestic_owl",
+        "email": "jasmine@gmail.com",
+        "password": "password456",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["financial", "personal", "career"],
+        "personality": ["!O", "C", "!E", "A", "N"]
+    },
+    {
+        "username": "kindly_owl",
+        "email": "karla@gmail.com",
+        "password": "password789",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["financial", "personal", "career"],
+        "personality": ["O", "C", "!E", "A", "!N"]
+    },
+    {
+        "username": "handsome_owl",
+        "email": "andre@gmail.com",
+        "password": "password1011",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["financial", "personal", "career"],
+        "personality": ["O", "C", "!E", "A", "N"]
+    },
+    {
+        "username": "eccentric_owl",
+        "email": "liam@gmail.com",
+        "password": "password1213",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["financial", "career"],
+        "personality": ["O", "C", "E", "!A", "N"]
+    },
+    {
+        "username": "gifted_owl",
+        "email": "emma@gmail.com",
+        "password": "password1415",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["personal"],
+        "personality": ["O", "C", "E", "A", "!N"]
+    },
+    {
+        "username": "bashful_owl",
+        "email": "noah@gmail.com",
+        "password": "password1617",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["personal", "career"],
+        "personality": ["!O", "!C", "!E", "!A", "!N"]
+    },
+    {
+        "username": "unpredictable_owl",
+        "email": "ava@gmail.com",
+        "password": "password1819",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["financial", "personal"],
+        "personality": ["!O", "!C", "!E", "!A", "N"]
+    },
+    {
+        "username": "spontaneous_owl",
+        "email": "isabella@gmail.com",
+        "password": "password2021",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["personal"],
+        "personality": ["O", "!C", "E", "!A", "!N"]
+    },
+    {
+        "username": "steadfast_owl",
+        "email": "sophia@gmail.com",
+        "password": "password2223",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["financial", "personal", "career"],
+        "personality": ["O", "C", "!E", "!A", "!N"]
+    },
+    {
+        "username": "diurnal_owl",
+        "email": "jackson@gmail.com",
+        "password": "password2425",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["financial", "career"],
+        "personality": ["!O", "!C", "E", "A", "!N"]
+    },
+    {
+        "username": "lucky_owl",
+        "email": "lucas@gmail.com",
+        "password": "password2627",
+        "role": ["user", "counselor"],
+        "expertiseCategory": ["financial", "personal", "career"],
+        "personality": ["O", "!C", "!E", "A", "!N"]
+    },
+    {
+        "username": "adipose_lion",
+        "email": "aiden@gmail.com",
+        "password": "password2829",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["O", "!C", "E", "!A", "!N"]
+    },
+    {
+        "username": "jubilant_giraffe",
+        "email": "mila@gmail.com",
+        "password": "password3031",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["!O", "C", "!E", "A", "!N"]
+    },
+    {
+        "username": "agnostic_elephant",
+        "email": "ethan@gmail.com",
+        "password": "password3233",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["!O", "C", "E", "!A", "!N"]
+    },
+    {
+        "username": "pious_zebra",
+        "email": "harper@gmail.com",
+        "password": "password3435",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["!O", "C", "E", "A", "!N"]
+    },
+    {
+        "username": "energetic_tiger",
+        "email": "evelyn@gmail.com",
+        "password": "password3637",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["O", "C", "!E", "!A", "!N"]
+    },
+    {
+        "username": "equivocal_bear",
+        "email": "abigail@gmail.com",
+        "password": "password3839",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["!O", "C", "!E", "!A", "!N"]
+    },
+    {
+        "username": "decisive_dolphin",
+        "email": "alexander@gmail.com",
+        "password": "password4041",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["!O", "!C", "E", "!A", "!N"]
+    },
+    {
+        "username": "charming_penguin",
+        "email": "james@gmail.com",
+        "password": "password4243",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["O", "!C", "!E", "!A", "N"]
+    },
+    {
+        "username": "organized_eagle",
+        "email": "benjamin@gmail.com",
+        "password": "password4445",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["!O", "!C", "!E", "!A", "!N"]
+    },
+    {
+        "username": "discombobulated_koala",
+        "email": "lily@gmail.com",
+        "password": "password4547",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["O", "C", "!E", "!A", "!N"]
+    },
+    {
+        "username": "copacetic_kangaroo",
+        "email": "zoe@gmail.com",
+        "password": "password4849",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["O", "!C", "!E", "A", "!N"]
+    },
+    {
+        "username": "mindful_gorilla",
+        "email": "samuel@gmail.com",
+        "password": "password5051",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["O", "!C", "!E", "!A", "!N"]
+    },
+    {
+        "username": "compassionate_panda",
+        "email": "grace@gmail.com",
+        "password": "password5253",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["!O", "!C", "E", "A", "!N"]
+    },
+    {
+        "username": "quirky_monkey",
+        "email": "scarlett@gmail.com",
+        "password": "password5455",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["O", "!C", "!E", "A", "!N"]
+    },
+    {
+        "username": "tactile_turtle",
+        "email": "elijah@gmail.com",
+        "password": "password5657",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["!O", "C", "!E", "!A", "!N"]
+    },
+    {
+        "username": "estranged_octopus",
+        "email": "chloe@gmail.com",
+        "password": "password5859",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["!O", "C", "!E", "!A", "N"]
+    },
+    {
+        "username": "apposite_armadillo",
+        "email": "victoria@gmail.com",
+        "password": "password6061",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["O", "!C", "!E", "!A", "!N"]
+    },
+    {
+        "username": "wandering_hedgehog",
+        "email": "daniel@gmail.com",
+        "password": "password6263",
+        "role": ["user"],
+        "expertiseCategory": [],
+        "personality": ["!O", "!C", "E", "!A", "N"]
+    }
+  ]

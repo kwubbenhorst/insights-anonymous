@@ -5,16 +5,16 @@ import { NavLink } from 'react-router-dom';
 const Nav = () => {
   return (
     <nav>
-      <NavLink to="/" activeClassName="active" exact>
+      <NavLink to="/" activeclassname="active" exact>
         Home
       </NavLink>
-      <NavLink to="/myconversation" activeClassName="active">
+      <NavLink to="/myconversation" activeclassname="active">
         My Conversation
       </NavLink>
-      <NavLink to="/login-signup" activeClassName="active">
+      <NavLink to="/login-signup" activeclassname="active">
         Login/Signup
       </NavLink>
-      <NavLink to="/resources" activeClassName="active">
+      <NavLink to="/resources" activeclassname="active">
         Resources
       </NavLink>
     </nav>

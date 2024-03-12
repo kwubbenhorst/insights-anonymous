@@ -1,6 +1,7 @@
 const { User, Conversation, Category } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 const findMatchingCounselor = require('../utils/matchingAlgorithm'); // import the matching algorithm for use in the createConversation mutation resolver
+const mongoose = require('mongoose');
 //const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
@@ -45,7 +46,7 @@ const resolvers = {
 
       return { token, user };
     },
-    createConversation: async (_, { conversationHeadText, expertiseCategory, preferredPersonality }, context) => {
+    createConversation: async (_, { title, conversationHeadText, expertiseCategory, preferredPersonality }, context) => {
       try{
         // Extract user information from the JWT token in the context
         const { token } = context;
@@ -68,6 +69,12 @@ const resolvers = {
         if (context.isAuthenticated && context.isPrivatePage) {
           // If the user is logged in and initiating a conversation from the private page
           isPrivate = true;
+
+          
+          // Validate expertiseCategory
+          if (!mongoose.Types.ObjectId.isValid(expertiseCategory)) {
+            throw new Error('Invalid expertiseCategory');
+          }
     
           // Validate preferredPersonality input for private conversations
           const validPersonalities = ['O', '!O', 'C', '!C', 'E', '!E', 'A', '!A', 'N', '!N', null];
@@ -96,6 +103,7 @@ const resolvers = {
     
         // Create the conversation
         const conversationInput = {
+          title,
           conversationHeadText,
           expertiseCategory: expertiseCategory,
           isPrivate,
@@ -115,8 +123,17 @@ const resolvers = {
         throw new AuthenticationError('Invalid or expired token');
       }
     },
-    createResponse: async (parent, { conversationId, responseText, username }) => {
-      const updatedConversation = await Conversation.findByIdAndUpdate(
+    createResponse: async (parent, { conversationId, responseText }, context) => {
+      try {
+        // Extract user information from the context
+        const { userId, username } = context.user;
+    
+        // Check if the user is authenticated
+        if (!userId || !username) {
+          throw new AuthenticationError('User not authenticated');
+        }
+      
+        const updatedConversation = await Conversation.findByIdAndUpdate(
         conversationId,
         {
           $push: {
@@ -134,8 +151,12 @@ const resolvers = {
       const newResponse = updatedConversation.responses.slice(-1)[0];
     
       return newResponse;
-    },
-  },
+  } catch (error) {
+    // Handle authentication error or any other potential issues
+    throw new Error('Error creating response: ' + error.message);
+  }
+}
+}
 };
 
 module.exports = resolvers;

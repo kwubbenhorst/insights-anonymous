@@ -17,13 +17,15 @@ const typeDefs = gql`
 
   type Conversation {
     conversationId: ID!
+    title: String!
     conversationHeadText: String!
     createdAt: String!
+    username: String!
     isClosed: Boolean!
     closedAt: String
     valueAtClose: Float
     isPrivate: Boolean!
-    expertiseCategory: ID
+    expertiseCategory: String!
     responses: [Response!]!
     responseCount: Int!
   }

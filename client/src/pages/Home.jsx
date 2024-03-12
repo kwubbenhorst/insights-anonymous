@@ -16,20 +16,20 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div className="row">
+        <div className="row public-conversations-section">
             <div className="col">
-                <h2 className="conversations-list-header"Financial>    
-                </h2>
+                <h3 className="conversations-list-header">Financial    
+                </h3>
                 <ConversationsList />
             </div>
             <div className="col">
-                <h2 className="conversations-list-header"Personal>    
-                </h2>
+                <h3 className="conversations-list-header">Personal    
+                </h3>
                 <ConversationsList />
             </div>
             <div className="col">
-                <h2 className="conversations-list-header"Career>    
-                </h2>
+                <h3 className="conversations-list-header">Career    
+                </h3>
                 <ConversationsList />
             </div>
         </div>

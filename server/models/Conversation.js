@@ -2,6 +2,13 @@ const { Schema, model, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const conversationSchema = new Schema({
+  title: {
+    type: String,
+    required: true,
+    minlength: 1,
+    maxlength: 280,
+    trim: true,
+  },
   conversationHeadText: { 
     type: String, 
     required: 'To start a conversation, you need to write something here!',
@@ -13,6 +20,10 @@ const conversationSchema = new Schema({
     type: Date, 
     default: Date.now, 
     get: (timestamp) => dateFormat(timestamp)
+  },
+  username: {
+    type: String,
+    required: true,
   },
   isClosed: { 
     type: Boolean, 
@@ -33,8 +44,8 @@ const conversationSchema = new Schema({
     default: false 
   },
   expertiseCategory: { 
-    type: Schema.Types.ObjectId, 
-    ref: 'Category' 
+    type: String, 
+    required: true 
   },
   responses: [
     {

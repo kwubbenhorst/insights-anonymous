@@ -1,31 +1,24 @@
-const db = require('../config/connection');
-const { User, Conversation, Category } = require('../models');
+const db = require('../config/connection'); 
+const { User, Conversation, Category } = require('../models'); 
 const userSeeds = require('./userSeeds.json');
-const conversationSeeds = require('./conversationSeeds.json');
 const categorySeeds = require('./categorySeeds.json');
-const cleanDB = require('./cleanDB');
+const conversationSeeds = require('./conversationSeeds.json');
+const cleanDB = require('./cleanDB'); 
 
 db.once('open', async () => {
   try {
-    await cleanDB('Conversation', 'conversations');
-
     await cleanDB('User', 'users');
 
     await cleanDB('Category', 'categories');
 
+    await cleanDB('Conversation', 'conversations');
+
     await User.create(userSeeds);
 
-    for (let i = 0; i < conversationSeeds.length; i++) {
-      const { _id, thoughtAuthor } = await Thought.create(thoughtSeeds[i]);
-      const user = await User.findOneAndUpdate(
-        { username: thoughtAuthor },
-        {
-          $addToSet: {
-            thoughts: _id,
-          },
-        }
-      );
-    }
+    await Category.create(categorySeeds);
+
+    await Conversation.create(conversationSeeds);
+
   } catch (err) {
     console.error(err);
     process.exit(1);
@@ -34,3 +27,8 @@ db.once('open', async () => {
   console.log('Seeding complete! 🌱');
   process.exit(0);
 });
+
+
+
+
+

@@ -1,0 +1,114 @@
+[
+    {
+        "title": "Spendthrift Spouse",
+        "conversationHeadText": "My wife spends too much money! She buys $6 Starbucks coffees every day while I am trying to pay off student debt. How can we get on the same page about finances?",
+        "username": "charming_penguin",
+        "isClosed": false,
+        "isPrivate": false,
+        "expertiseCategory": "financial",
+        "responses": [
+            {
+                "responseText": "This is both a financial problem, and a personal problem. Can I ask, are you newlyweds, or is this a long-established pattern",
+                "username": "majestic_owl"
+            },
+            {
+                "responseText": "We were married 18 months ago.",
+                "username": "charming_penguin"
+            },
+            {
+                "responseText": "To get to the root of spending habits you should explore together family context and attitudes to what the meaning and purpose of money is.",
+                "username": "majestic_owl"
+            },
+            {
+                "responseText": "Many people just don't know how much money gets away from them by buying coffee at Starbucks daily. Figure out some way to track it. I think she'd take your concerns more seriously if she saw the total.",
+                "username": "kindly_owl"
+            },
+            {
+                "responseText": "It will be important to raise this with her in a positive context. What are some goals you can set together as a couple that will only be possible if you control impulse spending in the short-term?",
+                "username": "tactile_turtle"
+            }
+        ]
+    },
+    {
+        "title": "Job Prospects in Tech",
+        "conversationHeadText": "Looking for guidance in my career path. I am wondering if AI is going to make computer programmers obsolete.",
+        "username": "estranged_octopus",
+        "isClosed": false,
+        "isPrivate": false,
+        "expertiseCategory": "career",
+        "responses": [
+            {
+                "responseText": "Tech is a big field. Is it software engineering you are particularly considering?",
+                "username": "handsome_owl"
+            },
+            {
+                "responseText": "I am just examining my options, so am open, but yes, I code as a hobby and was thinking of trying to turn it into a career.",
+                "username": "estranged_octopus"
+            },
+            {
+                "responseText": "I think the prospects in software engineering are long-term solid, but it is a field that is constantly evolving so if you pursue it you will have to be prepared to keep upgrading your skills (as well as your software!).",
+                "username": "handsome_owl"
+            },
+            {
+                "responseText": "I'm good with that. I was wondering specifically about the impact of AI.",
+                "username": "estranged_octopus"
+            },
+            {
+                "responseText": "I've been in a software engineer for 3 years now. AI is huge, but not only in the programming world. It will be a game changer for a lot of fields, so that means a lot of jobs in tech for those who know about AI and can help businesses of all kinds integrate it.",
+                "username": "apposite_armadillo"
+            },
+            {
+                "responseText": "Thanks, that's encouraging to hear!",
+                "username": "estranged_octopus"
+            }
+        ]
+    },
+    {
+        "title": "Bereavement Advice",
+        "conversationHeadText": "My Mum lost her battle with cancer last year on my birthday. I am at university and am struggling with the effects of grief and loss. Does it ever get better?",
+        "username": "discombobulated_koala",
+        "isClosed": false,
+        "isPrivate": false,
+        "expertiseCategory": "personal",
+        "responses": [
+            {
+                "responseText": "I'm so sorry about your loss. It is hard to lose a parent at any age, but part of what you are grieving is all the parts of your life that are yet to unfold that your mother will not be able to witness. Whenever you have a significant milestone or achievement it might help to include her in some way.",
+                "username": "confident_owl"
+            },
+            {
+                "responseText": "Yes, deepest sympathy. I think it must be especially hard to have lost her on your birthday. Sometimes when freshly bereaved we can find that certain dates have power over us. It will help to take a mindfulness attitude toward this: notice that you are off-colour on a particular date, but don't let the emotion hold you in its grip. A date is just a date.",
+                "username": "kindly_owl"
+            },
+            {
+                "responseText": "Grief is an intensely painful experience. Like physical pain and often the two are linked (ie. don't be surprised if you have physical manifestations of your emotional state). I can only say as one who has also lost a mother young, that you will never stop missing her, but the quality of the missing does change (becomes less intense). Hang in there.",
+                "username": "adipose_lion"
+            },
+            {
+                "responseText": "Don't stop talking about her. It may make you feel undone and so you may avoid it, but talking about a loved one who has passed honours them -- it keeps them included in a certain way among the living.",
+                "username": "lucky_owl"
+            },
+            {
+                "responseText": "Have you tried a grief support group or speaking to a university chaplain? When my father died, I found a grief group and it really helped. Your grief should never be compared to someone else's grief experience, but grief is very isolating. It can make you feel estranged from your happy-go-lucky friends at university. Connecting with others who have some experience of great loss can make you feel not so alone.",
+                "username": "agnostic_elephant"
+            }
+        ]
+    },
+    {
+        "title": "Trouble Forgiving",
+        "conversationHeadText": "I have a co-worker who stole some of my work and then lied about it. We used to be friends, but how can we recover from such a betrayal?",
+        "username": "estranged_octopus",
+        "isClosed": false,
+        "isPrivate": false,
+        "expertiseCategory": "personal",
+        "responses": [
+            {
+                "responseText": "Betrayal is like a death of the relationship that was. Restoring a relationship with a person is possible but it is a process. If you find you are being placed under pressure to just go on with the relationship as before, be very clear about what needs to happen.",
+                "username": "diurnal_owl"
+            },
+            {
+                "responseText": "Just cut the person loose. They showed you something about their essential character there. Take heed. Move on.",
+                "username": "energetic_tiger"
+            }
+        ]
+    }
+]

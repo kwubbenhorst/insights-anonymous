@@ -1,3 +1,14 @@
 p {
     font-weight: bolder;
 }
+
+.public-conversations-section {
+    background-color: var(--dark);
+    padding: 5px 20px 30px 20px;
+    border-radius: 1%;
+}
+
+h3 {
+    color: var(--med-light);
+    padding-top: 10px;
+}

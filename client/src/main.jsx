@@ -20,13 +20,13 @@ import Home from './pages/Home'
 //import MyConversation from './pages/MyConversation.jsx'
 //import LoginSignup from './pages/LoginSignup.jsx'
 //import Resources from './pages/Resources.jsx'
-//import Error from './pages/Error.jsx'
+import Error from './pages/Error.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    //errorElement: <Error />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
