@@ -8,21 +8,27 @@ const ConversationsList = () => {
         <ul className="list-group list-group-numbered">
             <li className="list-group-item d-flex justify-content-between align-items-start">
                 <div className="ms-2 me-auto">
+                <a href="#">
                     <div className="fw-bold">ConversationTitleOrFirst8Words</div>
+                </a>
                     ConversationHeadText
                 </div>
-                <span className="badge bg-primary rounded-pill">12</span>
+                <span className="badge rounded-pill">12</span>
             </li>
             <li className="list-group-item d-flex justify-content-between align-items-start">
                 <div className="ms-2 me-auto">
+                <a href="#">
                     <div className="fw-bold">ConversationTitleOrFirst8Words</div>
+                </a>
                     ConversationHeadText
                 </div>
                 <span className="badge bg-primary rounded-pill">7</span>
             </li>
             <li className="list-group-item d-flex justify-content-between align-items-start">
                 <div className="ms-2 me-auto">
+                <a href="#">
                     <div className="fw-bold">ConversationTitleOrFirst8Words</div>
+                </a>
                     ConversationHeadText
                 </div>
                 <span className="badge bg-primary rounded-pill">33</span>

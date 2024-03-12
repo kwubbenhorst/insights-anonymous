@@ -1,0 +1,20 @@
+.list-group-item  {
+    background-color: var(--light) !important;
+    border: 1px solid var(--med-light) !important;
+}
+
+.list-group-item::before {
+    display: none;
+}
+
+span.badge.rounded-pill {
+    background-color: var(--med-dark) !important;
+}
+
+a {
+    color: var(--med-dark);
+}
+
+a:hover {
+    color: var(--medium);
+}

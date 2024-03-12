@@ -1,0 +1,70 @@
+/* Style for the header container */
+header {
+  position: relative;
+  background: url('https://res.cloudinary.com/dqtpaispt/image/upload/v1710224555/stones-annie-spratt-smaller_ytchqk.jpg');
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start; 
+  border-bottom: 15px solid var(--med-light);
+  background-size: cover;
+  background-position: 0% 5%;
+
+}
+
+/* Container for name and navigation links */
+div.header-container {
+  background-color: var(--med-dark);
+  width: 100vw;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  border-bottom: 15px solid var(--medium);
+}
+
+/* Style for the h1 (Insights Anonymous) in the header
+h1 {
+  color: var(--med-light);
+  margin-left: 50px; 
+  margin-right: auto; 
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-bottom: 15px; 
+}
+*/
+
+.logo-container {
+  min-width: 60px;
+  max-width: 70px;
+  
+}
+
+/* Style for the logo in the header */
+img .logo {
+  margin-left: 50px; 
+  margin-right: auto;
+  max-width: 60px !important;
+  height: 60px !important;
+}
+
+/* Style for the navigation links */
+nav {
+  display: flex; 
+}
+
+/* Style for each individual link in the navigation */
+nav a {
+  color: var(--med-light); 
+  text-decoration: none; 
+  margin-right: 50px; 
+  font-size: 1.5rem;
+  font-weight: bolder; 
+}
+
+/* Style for the active navigation link */
+nav a.active {
+  color: var(--light); 
+  border-bottom: 3px solid var(--med-light); 
+}

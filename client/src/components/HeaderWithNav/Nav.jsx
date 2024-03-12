@@ -9,16 +9,56 @@ const Nav = () => {
         Home
       </NavLink>
       <NavLink to="/myconversation" activeClassName="active">
-        Portfolio
+        My Conversation
       </NavLink>
       <NavLink to="/login-signup" activeClassName="active">
-        Contact
+        Login/Signup
       </NavLink>
       <NavLink to="/resources" activeClassName="active">
-        Resume
+        Resources
       </NavLink>
     </nav>
   );
 };
 
 export default Nav;
+
+// import React from 'react';
+// import { NavLink } from 'react-router-dom';
+
+// const Nav = () => {
+//   return (
+//     <nav className="navbar navbar-expand-lg navbar-dark">
+//       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+//         <span className="navbar-toggler-icon"></span>
+//       </button>
+
+//       <div className="collapse navbar-collapse" id="navbar-nav">
+//         <ul className="navbar-nav ml-auto">
+//           <li className="nav-item">
+//             <NavLink to="/" activeClassName="active" className="nav-link" exact>
+//               Home
+//             </NavLink>
+//           </li>
+//           <li className="nav-item">
+//             <NavLink to="/myconversation" activeClassName="active" className="nav-link">
+//               My Conversation
+//             </NavLink>
+//           </li>
+//           <li className="nav-item">
+//             <NavLink to="/login-signup" activeClassName="active" className="nav-link">
+//               Login/Signup
+//             </NavLink>
+//           </li>
+//           <li className="nav-item">
+//             <NavLink to="/resources" activeClassName="active" className="nav-link">
+//               Resources
+//             </NavLink>
+//           </li>
+//         </ul>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Nav;

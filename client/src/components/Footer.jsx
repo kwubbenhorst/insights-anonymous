@@ -6,16 +6,12 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <p className="footer-text">
-        Built with ❤️ by
-        {' '}
-        <a href="https://github.com/tchan128" target="_blank" rel="noopener noreferrer">Tiffany</a>,
-        {' '}
-        <a href="https://github.com/ae-andre" target="_blank" rel="noopener noreferrer">Andre</a>,
-        {' '}
-        <a href="https://github.com/Jasmineleeyt" target="_blank" rel="noopener noreferrer">Jasmine</a>, and
-        {' '}
+        Built with love and react by
+        <a href="https://github.com/tchan128" target="_blank" rel="noopener noreferrer">Tiffany</a>
+        <a href="https://github.com/ae-andre" target="_blank" rel="noopener noreferrer">Andre</a>
+        <a href="https://github.com/Jasmineleeyt" target="_blank" rel="noopener noreferrer">Jasmine</a> 
         <a href="https://github.com/kwubbenhorst" target="_blank" rel="noopener noreferrer">Karla</a>
-        {' '}
+        <br></br>
         ©2024 All Rights Reserved
       </p>
     </footer>

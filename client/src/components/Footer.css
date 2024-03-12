@@ -1,0 +1,28 @@
+/* Style for the footer container */
+footer {
+  background-color: var(--med-dark); 
+  height: 85px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 15px solid var(--med-light);
+  padding: 10px 0;
+}
+
+/* Style for the p text within the footer */
+footer p {
+    color: var(--light);
+    margin: auto;
+    text-align: center;
+    font-family: var(--font-alegreya-sans);
+}
+
+/* Style for the links within the footer */
+footer a {
+  color: var(--med-light); 
+  font-size: 1rem; 
+  margin: 0 15px;
+  line-height: 1.2; 
+  text-decoration: none; 
+}

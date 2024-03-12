@@ -2,7 +2,8 @@
 import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import ConversationsList from '../components/ConversationsList';
-import Conversation from '../components/Conversation';
+import './Home.css'
+//import Conversation from '../components/Conversation';
 
 const Home = () => {
   return (

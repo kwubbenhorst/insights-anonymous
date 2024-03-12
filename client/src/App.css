@@ -5,12 +5,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 
     --light: #f2e9e4;
     --med-light: #c9ada7;
     --medium: #9a8c98;
     --med-dark: #4a4e69;
     --dark: #22223b;
+
+    background-color: var(--medium);
+    color: var(--dark);
     
     --font-crimson-pro: 'Crimson Pro', serif;
     --font-vollkorn: 'Vollkorn', serif;
@@ -52,7 +56,8 @@ body {
 }
     
 .main-content {
-    margin: 0 5%;
+  margin: auto;
+  padding: 2%;
 }
 
 /*
@@ -70,11 +75,11 @@ h1, h2 {
 }
     
 h3, p {
-    font-family: var(--font-marienda);
+    font-family: var(--font-handlee);
 }
     
 a {
-    font-family: var(--font-marienda);
+    font-family: var(--font-alegreya-sans);
     font-weight: 500;
     color: var(--med-light);
     text-decoration: none;
