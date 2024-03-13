@@ -16,7 +16,7 @@ export const GET_ALL_CONVERSATIONS = gql`
 export const GET_ALL_PUBLIC_CONVERSATIONS = gql`
   query GetAllPublicConversations {
     conversations(filter: { isPrivate: false }) {
-      _id
+      conversationId
       title
       username
       createdAt

@@ -1,25 +1,27 @@
 const { Schema, model, Types } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+const moment = require('moment'); // using moment to format dates
+// const dateFormat = require('../utils/dateFormat');
 
 const conversationSchema = new Schema({
   title: {
     type: String,
     required: true,
     minlength: 1,
-    maxlength: 280,
+    //maxlength: 280,
     trim: true,
   },
   conversationHeadText: { 
     type: String, 
     required: 'To start a conversation, you need to write something here!',
     minlength: 1, 
-    maxlength: 280,
+    // maxlength: 280,
     trim: true, 
   },
   createdAt: { 
     type: Date, 
     default: Date.now, 
-    get: (timestamp) => dateFormat(timestamp)
+    // get: (timestamp) => dateFormat(timestamp)
+    get: (createdAt) => moment(createdAt).format('MMM D, YYYY [at] h:mm a') //applies a getter method to format the timestamp on query
   },
   username: {
     type: String,
@@ -31,8 +33,12 @@ const conversationSchema = new Schema({
   },
   closedAt: {
     type: Date, 
+  //   set: function (value) {
+  //     return dateFormat(value);
+  //   },
+  // },
     set: function (value) {
-      return dateFormat(value);
+      return moment(value).format('MMM D, YYYY [at] h:mm a'); // Format the date using moment
     },
   },
   valueAtClose: {
@@ -57,7 +63,7 @@ const conversationSchema = new Schema({
         type: String,
         required: true, 
         minlength: 1, 
-        maxlength: 1000,
+        // maxlength: 1000,
       },
       username: {
         type: String, 
@@ -66,7 +72,8 @@ const conversationSchema = new Schema({
       createdAt: { 
         type: Date, 
         default: Date.now, 
-        get: (timestamp) => dateFormat(timestamp)
+        // get: (timestamp) => dateFormat(timestamp)
+        get: (createdAt) => moment(createdAt).format('MMM D, YYYY [at] h:mm a') //applies a getter method to format the timestamp on query
       },
     }
   ],

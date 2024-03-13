@@ -12,11 +12,43 @@ const resolvers = {
     user: async (parent, { userId }) => {
       return await User.findById(userId).populate('privateConversation conversationPartner conversationPartner expertiseCategory isAvailable personality');
     },
-    conversations: async () => {
-      return await Conversation.find().populate('expertiseCategory, responses.username, isClosed');
+    conversations: async (parent, { filter }) => {
+      // Use the filter argument to conditionally build the query
+      const filterQuery = filter ? { isPrivate: filter.isPrivate } : {};
+      
+      // Fetch conversations and populate the necessary fields
+      const conversations = await Conversation.find(filterQuery).populate('expertiseCategory responses.username');
+    
+      // Map over the conversations and handle potential null values
+      const formattedConversations = conversations.map((conversation) => {
+        return {
+          conversationId: conversation._id,  
+          title: conversation.title,
+          username: conversation.username,
+          createdAt: conversation.createdAt,
+          expertiseCategory: conversation.expertiseCategory || null,
+          isClosed: conversation.isClosed || false,
+          responseCount: conversation.responses.length,  // Assuming you want the count of responses
+        };
+      });
+    
+      return formattedConversations;
     },
     conversation: async (parent, { conversationId }) => {
-      return await Conversation.findById(conversationId).populate('expertiseCategory, isClosed');
+      // Fetch conversation by ID and populate the necessary fields
+      const conversation = await Conversation.findById(conversationId).populate('expertiseCategory');
+
+      // Handle potential null values
+      if (!conversation) {
+        // Conversation not found
+        return null;
+      }
+
+      return {
+        ...conversation.toObject(),  // Convert Mongoose document to plain JavaScript object
+        expertiseCategory: conversation.expertiseCategory || null,
+        isClosed: conversation.isClosed || false,  // Default is false if null
+      };
     },
     categories: async () => {
       return await Category.find();

@@ -9,40 +9,38 @@ import './Home.css'
 
 const Home = () => {
     // Use state to manage the display of conversations and the conditional rendering of the welcome blurb, start a conversation dialogue or detailed conversation view
-    const [conversations, setConversations] = useState([]);
+    // const [conversations, setConversations] = useState([]);
+    const [conversationsByCategory, setConversationsByCategory] = useState(new Map());
     const [showWelcomeBlurb, setShowWelcomeBlurb] = useState(true);
 
     const handleConversationClick = () => {
         setShowWelcomeBlurb(!showWelcomeBlurb);
-    }
+    };
 
     // Expect that conversations will be an array of fetched conversation objects
     const { loading, error, data } = useQuery(GET_ALL_PUBLIC_CONVERSATIONS);
 
     useEffect(() => {
+      console.log("Data in Home component:", data); // Log data to check if it's available
         if (data && data.conversations) {
-          // Set conversations state with the data from the query
-          setConversations(data.conversations);
-        }
-      }, [data]);
+          // Sorting logic: Group conversations by expertiseCategory
+          const categorizedConversations = new Map();
     
-      if (loading) {
-        return <p>Loading...</p>;
-      }
+          data.conversations.forEach((conversation) => {
+            const category = conversation.expertiseCategory;
+            if (!categorizedConversations.has(category)) {
+                categorizedConversations.set(category, []);
+            }
+            categorizedConversations.get(category).push(conversation);
+          });
+
+          // Log the categorized conversations to see if they are correctly grouped
+          console.log("Categorized Conversations:", categorizedConversations);
     
-      if (error) {
-        return <p>Error: {error.message}</p>;
+          // Set conversationsByCategory state
+          setConversationsByCategory(categorizedConversations);
       }
-    
-    // Sorting logic: Group conversations by expertiseCategory
-    const conversationsByCategory = new Map();
-    data.conversations.forEach((conversation) => {
-      const category = conversation.expertiseCategory;
-      if (!conversationsByCategory.has(category)) {
-        conversationsByCategory.set(category, []);
-      }
-    conversationsByCategory.get(category).push(conversation);
-      });
+  }, [data]);    
 
       return (
         <div className="main-content container">
@@ -56,19 +54,16 @@ const Home = () => {
           </div>
           <div className="row public-conversations-section">
             <div className="col">
-                <h3 className="conversations-list-header">Financial    
-                </h3>
-                <ConversationsList conversations={conversationsByCategory.get('Financial')} />
+                <h3 className="conversations-list-header">Financial</h3>
+                <ConversationsList conversations={conversationsByCategory.get('Financial') || []} expertiseCategory="Financial" />
             </div>
             <div className="col">
-                <h3 className="conversations-list-header">Personal    
-                </h3>
-                <ConversationsList conversations={conversationsByCategory.get('Personal')} />
+                <h3 className="conversations-list-header">Personal</h3>
+                <ConversationsList conversations={conversationsByCategory.get('Personal') || []} expertiseCategory="Personal" />
             </div>
             <div className="col">
-                <h3 className="conversations-list-header">Career    
-                </h3>
-                <ConversationsList conversations={conversationsByCategory.get('Career')} />
+                <h3 className="conversations-list-header">Career</h3>
+                <ConversationsList conversations={conversationsByCategory.get('Career') || []} expertiseCategory="Career" />
             </div>
         </div>
         <Outlet />
@@ -77,3 +72,4 @@ const Home = () => {
 };
 
 export default Home;
+

@@ -2,6 +2,10 @@ const { gql } = require('graphql-tag');
 
 //exclamation marks mean the field can't be null, most fields are so marked except expertise category because only those users in role of counselor will have a value there.
 const typeDefs = gql`
+  input ConversationFilterInput {
+  isPrivate: Boolean
+  }
+
   type User {
     userId: ID!
     username: String!
@@ -50,7 +54,7 @@ const typeDefs = gql`
   type Query {
     users: [User!]!
     user(userId: ID!): User
-    conversations: [Conversation!]!
+    conversations(filter: ConversationFilterInput): [Conversation]
     conversation(conversationId: ID!): Conversation
     categories: [Category!]!
   }

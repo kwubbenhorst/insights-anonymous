@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Nav = () => {
   return (
     <nav>
-      <NavLink to="/" activeclassname="active" exact>
+      <NavLink to="/" activeclassname="active" exact="true">
         Home
       </NavLink>
       <NavLink to="/myconversation" activeclassname="active">
