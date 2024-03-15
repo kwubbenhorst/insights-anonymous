@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_CONVERSATION_BY_ID } from '../utils/queries';
 import './Conversation.css';
 
 const Conversation = ({ conversationId, onClose }) => {
-    console.log("Value of conversationId that is being passed from the homepage parent component:", conversationId);
-    const { loading, error, data } = useQuery(GET_CONVERSATION_BY_ID, {
-        variables: { conversationId },
-    });
+  console.log("Value of conversationId that is being passed from the homepage parent component:", conversationId);
+
+  const { loading, error, data, refetch } = useQuery(GET_CONVERSATION_BY_ID, {
+      variables: { conversationId },
+  });
+
+  useEffect(() => {
+      if (conversationId) {
+          refetch();
+      }
+  }, [conversationId, refetch]);
 
     if  (loading) return <p>Loading...</p>;
     if  (error) return <p>Error...</p>;

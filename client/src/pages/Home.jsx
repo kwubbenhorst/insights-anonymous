@@ -41,6 +41,7 @@ const Home = () => {
   const handleConversationClick = (conversationId) => {
     console.log('Clicked conversation ID:', conversationId);
     setSelectedConversationId(conversationId);
+    console.log('Selected conversation ID after update:', selectedConversationId);
   };  
 
   return (
