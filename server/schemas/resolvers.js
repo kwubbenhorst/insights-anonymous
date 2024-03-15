@@ -22,7 +22,7 @@ const resolvers = {
       // Map over the conversations and handle potential null values
       const formattedConversations = conversations.map((conversation) => {
         return {
-          conversationId: conversation._id,  
+          _id: conversation._id,  
           title: conversation.title,
           username: conversation.username,
           createdAt: conversation.createdAt,
@@ -34,9 +34,9 @@ const resolvers = {
     
       return formattedConversations;
     },
-    conversation: async (parent, { conversationId }) => {
+    conversation: async (parent, { _id }) => {
       // Fetch conversation by ID and populate the necessary fields
-      const conversation = await Conversation.findById(conversationId).populate('expertiseCategory');
+      const conversation = await Conversation.findById(_id).populate('expertiseCategory');
 
       // Handle potential null values
       if (!conversation) {

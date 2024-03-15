@@ -20,7 +20,7 @@ const typeDefs = gql`
   }
 
   type Conversation {
-    conversationId: ID!
+    _id: ID!
     title: String!
     conversationHeadText: String!
     createdAt: String!

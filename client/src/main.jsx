@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx';
 import './App.css';
 import Home from './pages/Home'
+import Conversation from './components/Conversation.jsx'
 //import MyConversation from './pages/MyConversation.jsx'
 //import LoginSignup from './pages/LoginSignup.jsx'
 //import Resources from './pages/Resources.jsx'
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: '/conversation/:id', // The route for an individual conversation, using the Conversation component for display
+        element: <Conversation />,
       },
       // {
       //   path: '/myconversation',

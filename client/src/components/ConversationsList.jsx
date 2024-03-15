@@ -1,32 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ConversationsList.css';
 
-const ConversationsList = ({ conversations, expertiseCategory }) => {
+const ConversationsList = ({ conversations, expertiseCategory, onConversationClick }) => {
   console.log('Received expertiseCategory:', expertiseCategory);
+  console.log('Conversations:', conversations);
   
-  // Filter conversations based on expertiseCategory
-  const filteredConversations = conversations.filter(
-    (conversation) => {
-      console.log('Checking conversation:', conversation);
-      console.log('Matching:', conversation.expertiseCategory === expertiseCategory);
-      
-      return conversation.expertiseCategory === expertiseCategory
-    }
-  );
-
-  console.log('Filtered Conversations:', filteredConversations);
-
   return (
     <div className='conversations-list-container'>
       <ul className="list-group list-group-numbered">
-        {filteredConversations.map((conversation) => {
+        {conversations.map((conversation) => {
           console.log('Mapping Conversation:', conversation);
           return (
             <li key={conversation._id} className="list-group-item d-flex justify-content-between align-items-start">
               <div className="ms-2 me-auto">
-                <a href={`/conversation/${conversation._id}`}>
+                {/* Use Link component for navigation to a new conversation_id endpoint whenever a particular conversation.title is clicked */}
+                <Link to={`/conversation/${conversation._id}`}>
                   <div className="fw-bold">{conversation.title}</div>
-                </a>
+                </Link>
               </div>
               <span className="badge rounded-pill">{conversation.responseCount}</span>
             </li>
@@ -126,3 +117,20 @@ export default ConversationsList;
 // //   };
   
 //   export default ConversationsList;
+
+
+
+
+
+
+// // Filter conversations based on expertiseCategory
+  // const filteredConversations = conversations.filter(
+  //   (conversation) => {
+  //     console.log('Checking conversation:', conversation);
+  //     console.log('Matching:', conversation.expertiseCategory === expertiseCategory);
+      
+  //     return conversation.expertiseCategory === expertiseCategory
+  //   }
+  // );
+
+  // console.log('Filtered Conversations:', filteredConversations);
