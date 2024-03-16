@@ -1,4 +1,4 @@
-// This file contains code for the whole header component, comprising an h1 with my name, and the nav component imported from the Nav.jsx file.  The Header with nav appears at the top of every page of the application.
+// This file contains code for the whole header component, comprising an h1, the nav component imported from the Nav.jsx file.  The Header with nav appears at the top of every page of the application.
 import React from 'react';
 import Nav from './Nav';
 import './Header.css';
@@ -7,7 +7,8 @@ const Header = () => {
   return (
     <header>
       <div className="header-container">
-        <h1>Insights Anonymous</h1>
+        <img id="logo" src='https://res.cloudinary.com/dqtpaispt/image/upload/v1710181742/soulbench-smaller_blrsui.png' />
+        <h2>Insights Anonymous</h2>
         <Nav />
       </div>
     </header>

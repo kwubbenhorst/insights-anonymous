@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/conversation/:id', // The route for an individual conversation, using the Conversation component for display
-        element: <Conversation />,
+        element: <Home />,
       },
       // {
       //   path: '/myconversation',

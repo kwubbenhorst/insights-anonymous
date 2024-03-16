@@ -28,15 +28,15 @@ const resolvers = {
           createdAt: conversation.createdAt,
           expertiseCategory: conversation.expertiseCategory || null,
           isClosed: conversation.isClosed || false,
-          responseCount: conversation.responses.length,  // Assuming you want the count of responses
+          responseCount: conversation.responses.length,  
         };
       });
     
       return formattedConversations;
     },
-    conversation: async (parent, { _id }) => {
+    conversation: async (parent, { conversationId }) => {
       // Fetch conversation by ID and populate the necessary fields
-      const conversation = await Conversation.findById(_id).populate('expertiseCategory');
+      const conversation = await Conversation.findById(conversationId).populate('expertiseCategory');
 
       // Handle potential null values
       if (!conversation) {

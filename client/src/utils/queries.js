@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 
+
 export const GET_ALL_CONVERSATIONS = gql`
   query GetAllConversations {
     conversations {
@@ -43,7 +44,7 @@ export const GET_ALL_PRIVATE_CONVERSATIONS = gql`
 
 export const GET_CONVERSATION_BY_ID = gql`
   query GetConversationById($conversationId: ID!) {
-    conversation(_id: $conversationId) {
+    conversation(conversationId: $conversationId) {
       _id
       title
       conversationHeadText
@@ -60,7 +61,7 @@ export const GET_CONVERSATION_BY_ID = gql`
 `;
 
 
-// Add other queries as needed
+// Add other queries 
 // export const GET_SINGLE_CONVERSATION = gql`...`;
 // export const GET_USER_CONVERSATIONS = gql`...`;
 // ... and so on

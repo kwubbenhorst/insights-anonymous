@@ -3,11 +3,16 @@ import { useQuery } from '@apollo/client';
 import { GET_CONVERSATION_BY_ID } from '../utils/queries';
 import './Conversation.css';
 
-const Conversation = ({ conversationId, onClose }) => {
-  console.log("Value of conversationId that is being passed from the homepage parent component:", conversationId);
+const Conversation = ({ //conversationId, 
+  onClose }) => {
+  //console.log("Value of conversationId that is being passed from the homepage parent component:", conversationId);
+  let conversationId = localStorage.getItem('selectedConversationId');
+  console.log ('Value of conversationId retrieved from localStorage:', conversationId);
+  // Ensure conversationId is a string
+  const conversationIdString = conversationId.toString();
 
   const { loading, error, data, refetch } = useQuery(GET_CONVERSATION_BY_ID, {
-      variables: { conversationId },
+      variables: { conversationId: conversationIdString },
   });
 
   useEffect(() => {
@@ -20,6 +25,10 @@ const Conversation = ({ conversationId, onClose }) => {
     if  (error) return <p>Error...</p>;
 
     const { conversation: fetchedConversation } = data;
+    console.log ('Fetched conversation value:', fetchedConversation);
+    if (!fetchedConversation) {
+      return <p>Loading...</p>;
+    }
 
     return (
       <div className="conversation-container">
@@ -28,7 +37,11 @@ const Conversation = ({ conversationId, onClose }) => {
         <div className="response-container">
           <div className="response-list">
             {fetchedConversation.responses.map((response, index) => (
-              <div key={index} className="response">{response}</div>
+              <div key={index} className="response">
+                <p>{response.responseText}</p>
+                <p>{response.createdAt}</p>
+                <p>{response.username}</p>
+              </div>
             ))}
           </div>
         </div>

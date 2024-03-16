@@ -48,6 +48,14 @@ img .logo {
   height: 60px !important;
 }
 
+h2 {
+  margin-top: 10px;
+}
+
+.hamburger {
+  margin-right: 15px;
+}
+
 /* Style for the navigation links */
 nav {
   display: flex; 
